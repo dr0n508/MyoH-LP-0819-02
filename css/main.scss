@@ -1,0 +1,43 @@
+div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,checkbox,input,textarea {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+//variables
+$theme-color : #6c0038;
+$theme-color-second: #ab1d54;
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 26px;
+  line-height: 1.25;
+  @media only screen and (max-width: 1200px) { font-size: 22px; }
+  @media only screen and (max-width: 992px) { font-size: 18px; }
+}
+
+@import "normalize.css";
+@import "_grid.scss";
+@import "_base.scss";
+
+//fonts
+@import "../fonts/korolev-heavy-cufonfonts-webfont/style.css";
+@import "../fonts/TheMix-7Bold/styles.css";
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&subset=latin-ext');
+
+@import "_header.scss";
+@import "_hero.scss";
+@import "_contents.scss";
+@import "_footer.scss";
