@@ -15,7 +15,7 @@ img {
 }
 
 //variables
-$theme-color : #6c0038;
+$theme-color : #005da4;
 $theme-color-second: #ab1d54;
 
 body {
@@ -34,7 +34,6 @@ body {
 
 //fonts
 @import "../fonts/korolev-heavy-cufonfonts-webfont/style.css";
-@import "../fonts/TheMix-7Bold/styles.css";
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&subset=latin-ext');
 
 @import "_header.scss";

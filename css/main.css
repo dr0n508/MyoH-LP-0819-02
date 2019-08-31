@@ -1,6 +1,5 @@
 @import url(normalize.css);
 @import url(../fonts/korolev-heavy-cufonfonts-webfont/style.css);
-@import url(../fonts/TheMix-7Bold/styles.css);
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&subset=latin-ext");
 div, p, a, span, em, strong, img, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, td, tr, form, fieldset, label, select, checkbox, input, textarea {
   padding: 0;
@@ -97,7 +96,7 @@ body {
   color: #636363; }
 
 .theme-color {
-  background-color: #6c0038;
+  background-color: #005da4;
   color: white; }
 
 .theme-color-second {
@@ -108,7 +107,7 @@ section .title-section {
   margin-bottom: 40px;
   font-size: 60px;
   font-weight: bold;
-  color: #6c0038; }
+  color: #005da4; }
   @media only screen and (max-width: 1200px) {
     section .title-section {
       font-size: 46px; } }
@@ -128,14 +127,14 @@ section .title-section {
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
-  color: #6c0038;
-  border: solid 2px #6c0038;
+  color: #005da4;
+  border: solid 2px #005da4;
   padding: 5px;
   -webkit-transition: all 100ms ease-in;
   -moz-transition: all 100ms ease-in;
   transition: all 100ms ease-in; }
   .btn-transparent:hover {
-    background-color: #6c0038;
+    background-color: #005da4;
     color: white; }
 
 .btn-accent {
@@ -144,7 +143,7 @@ section .title-section {
   font-size: 24px;
   text-decoration: none;
   color: white;
-  background-color: #6c0038;
+  background-color: #005da4;
   border: solid 2px transparent;
   margin-bottom: 20px;
   -webkit-transition: all 100ms ease-in;
@@ -152,15 +151,15 @@ section .title-section {
   transition: all 100ms ease-in; }
   .btn-accent:hover {
     background-color: transparent;
-    color: #6c0038;
-    border-color: #6c0038; }
+    color: #005da4;
+    border-color: #005da4; }
 
 .btn-white {
   display: inline-block;
   padding: 10px 15px;
   font-size: 24px;
   text-decoration: none;
-  color: #6c0038;
+  color: #005da4;
   background-color: white;
   border: solid 2px transparent;
   margin-bottom: 20px;
@@ -250,41 +249,38 @@ blockquote {
   .main-header .main-logo {
     flex-basis: 200px;
     display: flex;
-    margin-top: -15px;
     z-index: 9;
     text-decoration: none; }
-    .main-header .main-logo span {
-      font-family: 'TheMix-7Bold', sans-serif;
-      font-size: 38px;
-      text-decoration: none;
-      color: #6c0038; }
-      .main-header .main-logo span sup {
-        font-size: 25px; }
+    .main-header .main-logo .logo-white {
+      display: none; }
   .main-header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-grow: 1000; }
-    .main-header nav ul li {
-      font-size: 28px;
-      display: inline-block; }
-      @media only screen and (max-width: 1200px) {
-        .main-header nav ul li {
-          font-size: 24px; } }
-      .main-header nav ul li:after {
-        content: "|";
-        font-size: inherit; }
-      .main-header nav ul li:last-child:after {
-        display: none; }
-      .main-header nav ul li a {
-        font-size: inherit;
-        text-transform: uppercase;
-        text-decoration: none;
-        padding: 20px;
-        color: #6c0038; }
-        .main-header nav ul li a:hover {
-          text-decoration: underline; }
-    @media only screen and (max-width: 768px) {
+    .main-header nav ul {
+      margin-left: 30px; }
+      .main-header nav ul li {
+        font-size: 28px;
+        display: inline-block; }
+        @media only screen and (max-width: 1200px) {
+          .main-header nav ul li {
+            font-size: 24px; } }
+        .main-header nav ul li:after {
+          content: "|";
+          font-size: inherit;
+          color: #005da4; }
+        .main-header nav ul li:last-child:after {
+          display: none; }
+        .main-header nav ul li a {
+          font-size: inherit;
+          text-transform: uppercase;
+          text-decoration: none;
+          padding: 20px;
+          color: #005da4; }
+          .main-header nav ul li a:hover {
+            text-decoration: underline; }
+    @media only screen and (max-width: 992px) {
       .main-header nav {
         display: none; } }
   .main-header .mobile-block {
@@ -300,7 +296,7 @@ blockquote {
     -webkit-transition: all 200ms ease-in;
     -moz-transition: all 200ms ease-in;
     transition: all 200ms ease-in; }
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 992px) {
       .main-header .mobile-toggle {
         display: block;
         z-index: 4; } }
@@ -310,7 +306,7 @@ blockquote {
       height: 3px;
       margin-bottom: 6px;
       border-radius: 1000px;
-      background-color: #414141;
+      background-color: #005da4;
       -webkit-transition: all 200ms ease-in;
       -moz-transition: all 200ms ease-in;
       transition: all 200ms ease-in; }
@@ -320,8 +316,10 @@ blockquote {
 .main-header.open-nav {
   position: fixed;
   z-index: 99; }
-  .main-header.open-nav .main-logo span {
-    color: white; }
+  .main-header.open-nav .main-logo .logo-blue {
+    display: none; }
+  .main-header.open-nav .main-logo .logo-white {
+    display: block; }
   .main-header.open-nav .mobile-toggle span {
     background-color: white; }
     .main-header.open-nav .mobile-toggle span:nth-child(1) {
@@ -346,12 +344,13 @@ blockquote {
     position: fixed;
     top: 0;
     left: 0;
-    background: #ab1d54;
+    background: #005da4;
     z-index: 2;
     height: auto;
     height: 100vh;
     width: 100%; }
     .main-header.open-nav nav ul {
+      margin-left: 0;
       margin-bottom: 30px; }
       .main-header.open-nav nav ul li {
         display: block;
@@ -407,13 +406,13 @@ blockquote {
       text-transform: uppercase;
       font-family: 'Korolev Heavy', sans-serif;
       margin: 20px 0;
-      color: #6c0038;
+      color: #005da4;
       text-shadow: 8px 10px 20px rgba(255, 255, 255, 0.9); }
     .hero-block .hero-content .sub-title {
       font-size: 41px;
       font-family: 'Korolev Medium', sans-serif;
       margin-bottom: 80px;
-      color: #6c0038;
+      color: #005da4;
       text-shadow: 8px 10px 20px rgba(255, 255, 255, 0.9); }
   @media only screen and (min-width: 1681px) {
     .hero-block .hero-content {
@@ -492,7 +491,7 @@ blockquote {
   .product-block h2 {
     font-size: 70px;
     line-height: 1;
-    color: #6c0038;
+    color: #005da4;
     margin-bottom: 30px; }
     .product-block h2 .price {
       display: inline-block;
@@ -713,7 +712,7 @@ blockquote {
     font-family: 'TheMix-7Bold', sans-serif;
     font-size: 38px;
     text-decoration: none;
-    color: #6c0038;
+    color: #005da4;
     margin-bottom: 10px; }
   .info-block .grid {
     display: flex; }
@@ -734,7 +733,7 @@ blockquote {
     margin: 0 auto; }
   .info-block p {
     font-size: 28px;
-    color: #6c0038;
+    color: #005da4;
     text-align: center;
     margin-bottom: 20px; }
     @media only screen and (max-width: 1200px) {
@@ -806,7 +805,7 @@ blockquote {
     text-align: center; }
   .chronic-inflammation .highlighted-text {
     font-size: 35px;
-    color: #6c0038; }
+    color: #005da4; }
   .chronic-inflammation p {
     font-size: 28px;
     margin-bottom: 20px; }

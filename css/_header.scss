@@ -13,15 +13,10 @@
   .main-logo {
     flex-basis: 200px;
     display: flex;
-    margin-top: -15px;
     z-index: 9;
     text-decoration: none;
-    span {
-      font-family: 'TheMix-7Bold', sans-serif;
-      font-size: 38px;
-      text-decoration: none;
-      color: $theme-color;
-      sup { font-size: 25px; }
+    .logo-white {
+      display: none;
     }
   }
   nav {
@@ -30,6 +25,7 @@
     align-items: center;
     flex-grow: 1000;
     ul {
+      margin-left: 30px;
       li {
         font-size: 28px;
         display: inline-block;
@@ -37,6 +33,7 @@
         &:after {
           content: "|";
           font-size: inherit;
+          color: $theme-color;
         }
         &:last-child:after { display: none; }
         a {
@@ -49,7 +46,7 @@
         }
       }
     }
-    @media only screen and (max-width: 768px) { display: none; }
+    @media only screen and (max-width: 992px) { display: none; }
   }
   .mobile-block {
     display: flex;
@@ -65,7 +62,7 @@
     -webkit-transition: all 200ms ease-in;
     -moz-transition: all 200ms ease-in;
     transition: all 200ms ease-in;
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 992px) {
       display: block;
       z-index: 4;
     }
@@ -75,7 +72,7 @@
       height: 3px;
       margin-bottom: 6px;
       border-radius: 1000px;
-      background-color: #414141;
+      background-color: $theme-color;
       -webkit-transition: all 200ms ease-in;
       -moz-transition: all 200ms ease-in;
       transition: all 200ms ease-in;
@@ -88,7 +85,12 @@
   position: fixed;
   z-index: 99;
   .main-logo {
-    span { color: white; }
+    .logo-blue {
+      display: none;
+    }
+    .logo-white {
+      display: block;
+    }
   }
   .mobile-toggle {
     span {
@@ -120,12 +122,13 @@
     position: fixed;
     top: 0;
     left: 0;
-    background: $theme-color-second;
+    background: $theme-color;
     z-index: 2;
     height: auto;
     height: 100vh;
     width: 100%;
     ul {
+      margin-left: 0;
       margin-bottom: 30px;
       li {
         display: block;
