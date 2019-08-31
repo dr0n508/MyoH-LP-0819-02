@@ -90,7 +90,7 @@ body {
   font-weight: bold; }
 
 .accent-text {
-  color: #ab1d54; }
+  color: #b2d235; }
 
 .gray-color {
   color: #636363; }
@@ -100,7 +100,7 @@ body {
   color: white; }
 
 .theme-color-second {
-  background-color: #ab1d54;
+  background-color: #b2d235;
   color: white; }
 
 section .title-section {
@@ -137,6 +137,23 @@ section .title-section {
     background-color: #005da4;
     color: white; }
 
+.btn-learn-more {
+  display: inline-block;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  border: solid 2px #b2d235;
+  background-color: #b2d235;
+  padding: 5px 10px;
+  -webkit-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
+  transition: all 100ms ease-in; }
+  .btn-learn-more:hover {
+    color: #005da4;
+    background-color: transparent; }
+
 .btn-accent {
   display: inline-block;
   padding: 10px 15px;
@@ -154,19 +171,19 @@ section .title-section {
     color: #005da4;
     border-color: #005da4; }
 
-.btn-white {
+.btn-second-accent {
   display: inline-block;
   padding: 10px 15px;
   font-size: 24px;
   text-decoration: none;
   color: #005da4;
-  background-color: white;
+  background-color: #b2d235;
   border: solid 2px transparent;
   margin-bottom: 20px;
   -webkit-transition: all 100ms ease-in;
   -moz-transition: all 100ms ease-in;
   transition: all 100ms ease-in; }
-  .btn-white:hover {
+  .btn-second-accent:hover {
     background-color: transparent;
     border-color: white;
     color: white; }
@@ -178,10 +195,10 @@ blockquote {
     margin-bottom: 10px;
     font-size: 30px;
     font-style: italic;
-    color: white; }
+    color: black; }
   blockquote .author {
     font-size: 24px;
-    color: white; }
+    color: black; }
     blockquote .author .stars {
       font-size: 30px; }
   @media only screen and (max-width: 1200px) {
@@ -399,32 +416,34 @@ blockquote {
   .hero-block .hero-content {
     position: relative;
     z-index: 3;
-    width: 65%;
+    width: 55%;
     padding: 60px 0 120px; }
     .hero-block .hero-content h1 {
       font-size: 78px;
       text-transform: uppercase;
       font-family: 'Korolev Heavy', sans-serif;
       margin: 20px 0;
-      color: #005da4;
+      color: black;
       text-shadow: 8px 10px 20px rgba(255, 255, 255, 0.9); }
     .hero-block .hero-content .sub-title {
       font-size: 41px;
       font-family: 'Korolev Medium', sans-serif;
       margin-bottom: 80px;
-      color: #005da4;
+      color: black;
       text-shadow: 8px 10px 20px rgba(255, 255, 255, 0.9); }
   @media only screen and (min-width: 1681px) {
     .hero-block .hero-content {
       padding: 150px 0 200px; } }
   @media only screen and (max-width: 1200px) {
     .hero-block .hero-content h1 {
-      font-size: 50px; }
+      font-size: 65px; }
     .hero-block .hero-content .sub-title {
       font-size: 32px; } }
   @media only screen and (max-width: 992px) {
     .hero-block .hero-content {
-      width: 100%; } }
+      width: 100%; }
+      .hero-block .hero-content h1 {
+        font-size: 50px; } }
   @media only screen and (max-width: 768px) {
     .hero-block .big-nopalea-logo img {
       width: 300px;
@@ -636,7 +655,7 @@ blockquote {
       text-align: left; }
 
 .guarantee-bar {
-  background-color: #ab1d54; }
+  background-color: #b2d235; }
   .guarantee-bar p {
     text-transform: uppercase;
     color: white;
@@ -708,18 +727,17 @@ blockquote {
 
 .info-block {
   padding: 85px 0; }
-  .info-block .logo-nopalea {
-    font-family: 'TheMix-7Bold', sans-serif;
-    font-size: 38px;
-    text-decoration: none;
-    color: #005da4;
-    margin-bottom: 10px; }
+  .info-block .centered-text {
+    width: 55%;
+    margin: 0 auto 30px; }
+    @media only screen and (max-width: 450px) {
+      .info-block .centered-text {
+        width: 100%; } }
   .info-block .grid {
     display: flex; }
   .info-block .col {
     padding: 0 50px;
     display: flex;
-    flex-direction: column;
     justify-content: space-between; }
     @media only screen and (max-width: 768px) {
       .info-block .col {
@@ -731,6 +749,9 @@ blockquote {
     max-width: 100%;
     display: block;
     margin: 0 auto; }
+    @media only screen and (max-width: 768px) {
+      .info-block img {
+        width: 300px; } }
   .info-block p {
     font-size: 28px;
     color: #005da4;
@@ -754,79 +775,85 @@ blockquote {
   padding: 40px 0; }
   .science-block .title-section {
     text-align: center; }
-  .science-block .descr-check-list {
-    font-size: 31px;
-    font-weight: bold; }
+  .science-block p {
+    margin-bottom: 20px;
+    text-align: center; }
+  .science-block .centered-block {
+    width: 60%;
+    margin: 50px auto;
+    text-align: center; }
+    .science-block .centered-block p {
+      font-weight: bold;
+      margin-bottom: 50px; }
   .science-block .grid .col:first-child {
     padding-right: 40px; }
   .science-block .grid .col:last-child {
     padding-left: 40px; }
-  @media only screen and (max-width: 1200px) {
-    .science-block .descr-check-list {
-      font-size: 26px; } }
   @media only screen and (max-width: 992px) {
-    .science-block .descr-check-list {
-      font-size: 22px; }
     .science-block .grid .col:first-child {
       padding-right: 10px; }
     .science-block .grid .col:last-child {
       padding-left: 10px; } }
+  @media only screen and (max-width: 450px) {
+    .science-block .centered-block {
+      width: 90%; } }
 
-.nopa-factory {
-  padding: 40px 0; }
-  .nopa-factory p {
-    font-size: 28px;
-    margin-bottom: 20px;
+.icons-section {
+  padding: 40px 0;
+  background-color: #e1e1e1; }
+  .icons-section .title-section {
+    text-align: center;
+    text-transform: uppercase; }
+  .icons-section .icons-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     text-align: center; }
-    .nopa-factory p:last-child {
-      margin-bottom: 0; }
-  .nopa-factory .grid .col:first-child {
-    padding-right: 40px; }
-  .nopa-factory .grid .col:last-child {
-    padding-left: 40px; }
-  @media only screen and (max-width: 1200px) {
-    .nopa-factory p {
-      font-size: 24px; } }
-  @media only screen and (max-width: 992px) {
-    .nopa-factory p {
-      font-size: 20px; } }
-  @media only screen and (max-width: 768px) {
-    .nopa-factory img {
-      display: block;
-      margin: 0 auto; } }
+    .icons-section .icons-list li {
+      width: 25%;
+      padding: 0 20px 40px 20px; }
+      .icons-section .icons-list li .wrap-img {
+        min-height: 115px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+      .icons-section .icons-list li p {
+        font-weight: bold; }
+  .icons-section .icons-list.first-row li {
+    width: 33%;
+    padding: 0 50px 40px 50px; }
+    @media only screen and (max-width: 992px) {
+      .icons-section .icons-list.first-row li {
+        padding: 0 30px 40px 30px; } }
+    @media only screen and (max-width: 768px) {
+      .icons-section .icons-list.first-row li {
+        width: 50%; } }
+    @media only screen and (max-width: 500px) {
+      .icons-section .icons-list.first-row li {
+        width: 100%; } }
+  .icons-section .icons-list.second-row li {
+    width: 25%; }
+    @media only screen and (max-width: 768px) {
+      .icons-section .icons-list.second-row li {
+        width: 50%; } }
 
-.chronic-inflammation {
+.what-is-myoh {
   padding: 40px 0; }
-  .chronic-inflammation .grid .col:first-child {
-    padding-right: 40px; }
-  .chronic-inflammation .grid .col:last-child {
-    padding-left: 40px; }
-  .chronic-inflammation .title-section {
-    text-align: center; }
-  .chronic-inflammation .highlighted-text {
-    font-size: 35px;
-    color: #005da4; }
-  .chronic-inflammation p {
-    font-size: 28px;
+  .what-is-myoh .grid .col:first-child {
+    padding-right: 30px; }
+  .what-is-myoh .grid .col:last-child {
+    padding-left: 30px; }
+  .what-is-myoh p {
     margin-bottom: 20px; }
-  .chronic-inflammation ul {
-    margin-left: 25px; }
-    .chronic-inflammation ul li {
-      list-style: disc;
-      font-size: 28px; }
-  .chronic-inflammation .links-reference {
-    text-decoration: none;
-    color: #3a92d0; }
-  @media only screen and (max-width: 1200px) {
-    .chronic-inflammation .highlighted-text {
-      font-size: 28px; }
-    .chronic-inflammation p, .chronic-inflammation ul li {
-      font-size: 24px; } }
-  @media only screen and (max-width: 992px) {
-    .chronic-inflammation .highlighted-text {
-      font-size: 24px; }
-    .chronic-inflammation p, .chronic-inflammation ul li {
-      font-size: 20px; } }
+  @media only screen and (max-width: 768px) {
+    .what-is-myoh .grid {
+      flex-direction: column-reverse; }
+      .what-is-myoh .grid .col {
+        margin-bottom: 20px; }
+      .what-is-myoh .grid .col.col-img img {
+        width: 400px;
+        margin: 0 auto; } }
 
 .doc-section {
   padding-top: 40px; }
@@ -834,6 +861,8 @@ blockquote {
     padding-right: 40px; }
   .doc-section .grid .col:last-child {
     padding-left: 40px; }
+  .doc-section .grid .col blockquote .text-blockquote, .doc-section .grid .col blockquote p {
+    color: white; }
   .doc-section .grid .col img {
     display: block; }
     @media only screen and (max-width: 768px) {
@@ -846,6 +875,11 @@ blockquote {
 
 .cta-block {
   padding: 40px 0; }
+  @media only screen and (max-width: 768px) {
+    .cta-block .grid .col-img {
+      justify-content: center; }
+      .cta-block .grid .col-img img {
+        width: 400px; } }
 
 .main-footer {
   padding: 40px 0;
@@ -855,11 +889,11 @@ blockquote {
     margin-bottom: 50px; }
   .main-footer .nav-list {
     display: inline;
-    margin-bottom: 20px; }
-    @media only screen and (max-width: 769px) {
+    margin-bottom: 30px; }
+    @media only screen and (max-width: 1200px) {
       .main-footer .nav-list {
         display: block; } }
-    @media only screen and (min-width: 770px) {
+    @media only screen and (min-width: 1200px) {
       .main-footer .nav-list:first-child li:last-child:after {
         display: inline; } }
     .main-footer .nav-list li {
@@ -886,6 +920,11 @@ blockquote {
         @media only screen and (max-width: 769px) {
           .main-footer .nav-list li a {
             padding: 10px; } }
+      @media only screen and (max-width: 450px) {
+        .main-footer .nav-list li {
+          display: block; }
+          .main-footer .nav-list li:after {
+            display: none; } }
     .main-footer .nav-list .top-link {
       background: url("../img/home/up-icon.png") no-repeat 0% 50%; }
       .main-footer .nav-list .top-link a {
@@ -911,5 +950,23 @@ blockquote {
     @media only screen and (max-width: 992px) {
       .main-footer .copyright-text {
         font-size: 12px; } }
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0; }
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.video {
+  position: relative;
+  width: 100%;
+  overflow: hidden; }
 
 /*# sourceMappingURL=main.css.map */

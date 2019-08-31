@@ -77,6 +77,25 @@ section .title-section {
   }
 }
 
+.btn-learn-more {
+  display: inline-block;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  border: solid 2px $theme-color-second;
+  background-color: $theme-color-second;
+  padding: 5px 10px;
+  -webkit-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+  &:hover {
+    color: $theme-color;
+    background-color: transparent;
+  }
+}
+
 .btn-accent {
   display: inline-block;
   padding: 10px 15px;
@@ -96,13 +115,13 @@ section .title-section {
   }
 }
 
-.btn-white {
+.btn-second-accent {
   display: inline-block;
   padding: 10px 15px;
   font-size: 24px;
   text-decoration: none;
   color: $theme-color;
-  background-color: white;
+  background-color: $theme-color-second;
   border: solid 2px transparent;
   margin-bottom: 20px;
   -webkit-transition: all 100ms ease-in;
@@ -122,11 +141,11 @@ blockquote {
     margin-bottom: 10px;
     font-size: 30px;
     font-style: italic;
-    color: white;
+    color: black;
   }
   .author {
     font-size: 24px;
-    color: white;
+    color: black;
     .stars {
       font-size: 30px;
     }

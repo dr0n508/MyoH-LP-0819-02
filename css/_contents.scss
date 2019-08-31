@@ -303,18 +303,17 @@
 //info-block home page
 .info-block {
   padding: 85px 0;
-  .logo-nopalea {
-    font-family: 'TheMix-7Bold', sans-serif;
-    font-size: 38px;
-    text-decoration: none;
-    color: $theme-color;
-    margin-bottom: 10px;
+  .centered-text {
+    width: 55%;
+    margin: 0 auto 30px;
+    @media only screen and (max-width: 450px) {
+      width: 100%;
+    }
   }
   .grid { display: flex; }
   .col {
     padding: 0 50px;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     @media only screen and (max-width: 768px) {
       max-width: 400px;
@@ -326,6 +325,9 @@
     max-width: 100%;
     display: block;
     margin: 0 auto;
+    @media only screen and (max-width: 768px) {
+      width: 300px;
+    }
   }
   p {
     font-size: 28px;
@@ -346,91 +348,145 @@
   }
 }
 
-//science-block home,science pages
+//science-block home
 .science-block {
   padding: 40px 0;
   .title-section { text-align: center; }
-  .descr-check-list {
-    font-size: 31px;
-    font-weight: bold;
+  p {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .centered-block {
+    width: 60%;
+    margin: 50px auto;
+    text-align: center;
+    p {
+      font-weight: bold;
+      margin-bottom: 50px;
+    }
   }
   .grid {
     .col:first-child { padding-right: 40px; }
     .col:last-child { padding-left: 40px; }
   }
-  @media only screen and (max-width: 1200px) {
-    .descr-check-list  { font-size: 26px; }
-  }
   @media only screen and (max-width: 992px) {
-    .descr-check-list  { font-size: 22px; }
     .grid {
       .col:first-child { padding-right: 10px; }
       .col:last-child { padding-left: 10px; }
     }
   }
+  @media only screen and (max-width: 450px) {
+    .centered-block {
+      width: 90%;
+    }
+  }
+}
+
+//icons-section
+.icons-section {
+  padding: 40px 0;
+  background-color: #e1e1e1;
+  .title-section {
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .icons-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    li {
+      width: 25%;
+      padding: 0 20px 40px 20px;
+      .wrap-img {
+        min-height: 115px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      p {
+        font-weight: bold;
+      }
+    }
+  }
+  .icons-list.first-row {
+    li {
+      width: 33%;
+      padding: 0 50px 40px 50px;
+      @media only screen and (max-width: 992px) {
+        padding: 0 30px 40px 30px;
+      }
+      @media only screen and (max-width: 768px) {
+        width: 50%;
+      }
+      @media only screen and (max-width: 500px) {
+        width: 100%;
+      }
+    }
+  }
+  .icons-list.second-row {
+    li {
+      width: 25%;
+      @media only screen and (max-width: 768px) {
+        width: 50%;
+      }
+    }
+  }
 }
 
 //nopa-factory home page
-.nopa-factory {
-  padding: 40px 0;
-  p {
-    font-size: 28px;
-    margin-bottom: 20px;
-    text-align: center;
-    &:last-child { margin-bottom: 0; }
-  }
-  .grid {
-    .col:first-child { padding-right: 40px; }
-    .col:last-child { padding-left: 40px; }
-  }
-  @media only screen and (max-width: 1200px) {
-    p { font-size: 24px; }
-  }
-  @media only screen and (max-width: 992px) {
-    p { font-size: 20px; }
-  }
-  @media only screen and (max-width: 768px) {
-    img {
-      display: block;
-      margin: 0 auto;
-    }
-  }
-}
+//.nopa-factory {
+//  padding: 40px 0;
+//  p {
+//    font-size: 28px;
+//    margin-bottom: 20px;
+//    text-align: center;
+//    &:last-child { margin-bottom: 0; }
+//  }
+//  .grid {
+//    .col:first-child { padding-right: 40px; }
+//    .col:last-child { padding-left: 40px; }
+//  }
+//  @media only screen and (max-width: 1200px) {
+//    p { font-size: 24px; }
+//  }
+//  @media only screen and (max-width: 992px) {
+//    p { font-size: 20px; }
+//  }
+//  @media only screen and (max-width: 768px) {
+//    img {
+//      display: block;
+//      margin: 0 auto;
+//    }
+//  }
+//}
 
-//chronic-inflammation home page
-.chronic-inflammation {
+//what-is-myoh home page
+.what-is-myoh {
   padding: 40px 0;
   .grid {
-    .col:first-child { padding-right: 40px; }
-    .col:last-child { padding-left: 40px; }
-  }
-  .title-section { text-align: center; }
-  .highlighted-text {
-    font-size: 35px;
-    color: $theme-color;
+    .col:first-child { padding-right: 30px; }
+    .col:last-child { padding-left: 30px; }
   }
   p {
-    font-size: 28px;
     margin-bottom: 20px;
   }
-  ul {
-    margin-left: 25px;
-    li {
-      list-style: disc;
-      font-size: 28px;
-    }
-  }
-  .links-reference {
-    text-decoration: none;
-    color: #3a92d0;
-  }
-  @media only screen and (max-width: 1200px) {
-    .highlighted-text { font-size: 28px; }
-    p, ul li { font-size: 24px; }
-  }
-  @media only screen and (max-width: 992px) {
-    .highlighted-text { font-size: 24px; }
-    p, ul li { font-size: 20px; }
+
+  @media only screen and (max-width: 768px) {
+    .grid {
+      flex-direction: column-reverse;
+      .col {
+        margin-bottom: 20px;
+      }
+      .col.col-img {
+        img {
+          width: 400px;
+          margin: 0 auto;
+
+        }
+      }
+    };
   }
 }
 
@@ -441,6 +497,11 @@
     .col:first-child { padding-right: 40px; }
     .col:last-child { padding-left: 40px; }
     .col {
+      blockquote {
+        .text-blockquote, p {
+          color: white;
+        }
+      }
       img {
         display: block;
         @media only screen and (max-width: 768px) {
@@ -454,4 +515,16 @@
 }
 
 //cta-block
-.cta-block { padding: 40px 0; }
+.cta-block {
+  padding: 40px 0;
+  @media only screen and (max-width: 768px) {
+    .grid {
+      .col-img {
+        justify-content: center;
+        img {
+          width: 400px;
+        }
+      }
+    }
+  }
+}

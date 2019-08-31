@@ -35,21 +35,21 @@
   .hero-content {
     position: relative;
     z-index: 3;
-    width: 65%;
+    width: 55%;
     padding: 60px 0 120px;
     h1 {
       font-size: 78px;
       text-transform: uppercase;
       font-family: 'Korolev Heavy', sans-serif;
       margin: 20px 0;
-      color: $theme-color;
+      color: black;
       text-shadow: 8px 10px 20px rgba(255, 255, 255, 0.9)
     }
     .sub-title {
       font-size: 41px;
       font-family: 'Korolev Medium', sans-serif;
       margin-bottom: 80px;
-      color: $theme-color;
+      color: black;
       text-shadow:8px 10px 20px rgba(255, 255, 255, 0.9)
     }
   }
@@ -60,12 +60,15 @@
   }
   @media only screen and (max-width: 1200px) {
     .hero-content {
-      h1 { font-size: 50px; }
+      h1 { font-size: 65px; }
       .sub-title { font-size: 32px; }
     }
   }
   @media only screen and (max-width: 992px) {
-    .hero-content { width: 100%; }
+    .hero-content {
+      width: 100%;
+      h1 { font-size: 50px; }
+    }
   }
   @media only screen and (max-width: 768px) {
     .big-nopalea-logo {
