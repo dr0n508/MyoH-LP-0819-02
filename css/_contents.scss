@@ -1,32 +1,33 @@
 //product-block product-page
 .product-block {
-  padding: 60px 0;
-  .col {
-    margin-bottom: 30px;
-  }
-  .col-img {
-    padding-left: 40px;
+  padding: 60px 0 30px;
+  .grid {
+    .col {
+      margin-bottom: 30px;
+    }
+    .col.col-img {
+      flex-direction: column;
+      justify-content: center;
+      img { margin-bottom: 30px; }
+    }
+    .col:first-child {
+      padding-right: 50px;
+      padding-left: 50px;
+    }
+    .col:last-child { padding-left: 50px; }
   }
   h2 {
     font-size: 70px;
     line-height: 1;
-    color: $theme-color;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     .price {
       display: inline-block;
       position: relative;
-      .cents {
-        position: absolute;
-        display: inline-block;
-        font-size: 40px;
-        top: 0;
-        right: -40px;
-      }
     }
   }
   .descr-list {
     margin-left: 25px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     li {
       list-style: disc;
       font-size: 28px;
@@ -36,36 +37,26 @@
   .special-offer {
     .label-offer {
       font-size: 32px;
+      margin-bottom: 0;
     }
-    .label-list {
-      font-size: 40px;
-      font-weight: bold;
-      margin-bottom: 15px;
-    }
-    .offer-list {
-      margin-left: 25px;
-      margin-bottom: 25px;
-      li {
-        list-style: disc;
-        font-size: 30px;
-        margin-bottom: 15px;
-      }
-    }
-    .list-btns {
-      display: flex;
-      text-align: center;
-      justify-content: space-between;
-      a {
-        margin-bottom: 10px;
-      }
-      p {
-        font-size: 32px;
-        font-weight: 300;
-      }
+    p {
+      font-size: 20px;
+      margin-bottom: 20px;
     }
     .small-text {
       font-size: 16px;
-      margin-bottom: 60px;
+    }
+  }
+  .list-btns {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    a {
+      margin-bottom: 10px;
+      &:first-child {
+        margin-right: 30px;
+      }
     }
   }
   @media only screen and (max-width: 1200px) {
@@ -82,40 +73,29 @@
       }
       h2 {
         font-size: 50px;
-        .price {
-          .cents {
-            font-size: 30px;
-            right: -30px;
-          }
-        }
-      }
-      .label-list {
-        font-size: 32px;
-      }
-      .offer-list {
-        li {
-          font-size: 26px;
-          margin-bottom: 5px;
-        }
       }
       .small-text {
         margin-bottom: 30px;
       }
-      .list-btns {
-        flex-direction: column;
-        li { margin-bottom: 10px; }
-        a { font-size: 20px; }
-        p { font-size: 26px; }
-      }
+    }
+    .list-btns {
+      flex-direction: column;
+      li { margin-bottom: 10px; }
+      a { font-size: 20px; }
+      p { font-size: 26px; }
     }
   }
   @media only screen and (max-width: 992px) {
     .grid {
       flex-direction: column;
       align-items: center;
-      .col-img {
-        padding: 0;
+      .col:first-child {
+        padding-right: 0px;
+      }
+      .col:last-child { padding-left: 0px; }
+      .col.col-img {
         justify-content: center;
+        flex-direction: column-reverse;
         img {
           width: 400px;
           max-width: 100%;
@@ -123,7 +103,6 @@
       }
     }
     .col { width: 70%; }
-
   }
   @media only screen and (max-width: 768px) {
     .grid .col.col-img { justify-content: center; }
@@ -131,19 +110,19 @@
       li { font-size: 20px; }
     }
     .special-offer {
+      p {
+        font-size: 18px;
+      }
       .label-offer {
         font-size: 24px;
       }
       h2 {
         font-size: 38px;
-        .price .cents {
-          font-size: 26px;
-          right: -26px;
-        }
       }
-      .label-list { font-size: 26px; }
-      .offer-list {
-        li { font-size: 22px; }
+    }
+    .list-btns {
+      a:first-child {
+        margin-right: 0;
       }
     }
   }
