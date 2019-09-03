@@ -520,10 +520,12 @@ blockquote {
       margin-bottom: 50px;
       color: #005da4; }
   @media only screen and (max-width: 768px) {
-    .hero-block.hero-science .hero-content {
-      margin-left: 0; }
-      .hero-block.hero-science .hero-content h1 {
-        margin-bottom: 30px; } }
+    .hero-block.hero-science {
+      background-position: 80% 50%; }
+      .hero-block.hero-science .hero-content {
+        margin-left: 0; }
+        .hero-block.hero-science .hero-content h1 {
+          margin-bottom: 30px; } }
 
 .hero-block.hero-product {
   background-position: 100% 50%;
@@ -1020,10 +1022,13 @@ blockquote {
       .main-footer .nav-list:first-child li:last-child:after {
         display: inline; } }
     .main-footer .nav-list li {
-      display: inline-block; }
+      display: inline-block;
+      position: relative; }
       .main-footer .nav-list li:after {
         content: "|";
-        position: absolute; }
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%); }
       .main-footer .nav-list li:last-child:after {
         display: none; }
       .main-footer .nav-list li a {
@@ -1031,7 +1036,8 @@ blockquote {
         color: white;
         text-decoration: none;
         text-transform: uppercase;
-        padding: 15px; }
+        padding: 15px;
+        display: inline-block; }
         .main-footer .nav-list li a:hover {
           text-decoration: underline; }
         @media only screen and (max-width: 1200px) {
@@ -1042,15 +1048,18 @@ blockquote {
             font-size: 16px; } }
         @media only screen and (max-width: 769px) {
           .main-footer .nav-list li a {
-            padding: 10px; } }
+            padding: 5px 10px; } }
       @media only screen and (max-width: 450px) {
         .main-footer .nav-list li {
           display: block; }
+          .main-footer .nav-list li a {
+            display: inline-block; }
           .main-footer .nav-list li:after {
             display: none; } }
     .main-footer .nav-list .top-link {
       background: url("../img/home/up-icon.png") no-repeat 0% 50%; }
       .main-footer .nav-list .top-link a {
+        display: inline;
         padding-left: 30px;
         cursor: pointer; }
       @media only screen and (max-width: 769px) {
