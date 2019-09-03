@@ -231,54 +231,6 @@
   }
 }
 
-//bioflavonoids-block science pages
-.bioflavonoids-block {
-  padding: 65px 0;
-  p {
-    font-size: 28px;
-    max-width: 1000px;
-    margin: 0 auto 40px;
-  }
-  .accent-text { max-width: 600px; }
-  img {
-    display: block;
-    margin: 0 auto;
-  }
-  @media only screen and (max-width: 1200px) {
-    p { font-size: 24px; }
-  }
-  @media only screen and (max-width: 992px) {
-    p { font-size: 20px; }
-  }
-}
-
-//charts-block science pages
-.charts-block {
-  padding: 60px 0;
-  .centered-text {
-    max-width: 700px;
-    margin: 0 auto 50px;
-  }
-  .grid {
-    .col {
-      margin-bottom: 80px;
-      img {
-        width: 100%;
-        height: auto;
-      }
-    }
-    .col:nth-child(odd) {  padding-right: 40px; }
-    .col:nth-child(even) { padding-left: 40px; }
-    @media only screen and (max-width: 768px) {
-      .col:nth-child(even), .col:nth-child(odd) {
-        width: 100%;
-        padding: 0;
-        margin-bottom: 40px;
-      }
-    }
-  }
-}
-
 //info-block home page
 .info-block {
   padding: 85px 0;
@@ -289,7 +241,6 @@
       width: 100%;
     }
   }
-  .grid { display: flex; }
   .col {
     padding: 0 50px;
     display: flex;
@@ -368,12 +319,19 @@
   .title-section {
     text-align: center;
     text-transform: uppercase;
+    @media only screen and (min-width: 1200px) {
+      font-size: 55px;
+    }
   }
   .icons-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+    margin-bottom: 50px;
+    &:last-child {
+      margin-bottom: 0;
+    }
     li {
       width: 25%;
       padding: 0 20px 40px 20px;
@@ -414,33 +372,6 @@
   }
 }
 
-//nopa-factory home page
-//.nopa-factory {
-//  padding: 40px 0;
-//  p {
-//    font-size: 28px;
-//    margin-bottom: 20px;
-//    text-align: center;
-//    &:last-child { margin-bottom: 0; }
-//  }
-//  .grid {
-//    .col:first-child { padding-right: 40px; }
-//    .col:last-child { padding-left: 40px; }
-//  }
-//  @media only screen and (max-width: 1200px) {
-//    p { font-size: 24px; }
-//  }
-//  @media only screen and (max-width: 992px) {
-//    p { font-size: 20px; }
-//  }
-//  @media only screen and (max-width: 768px) {
-//    img {
-//      display: block;
-//      margin: 0 auto;
-//    }
-//  }
-//}
-
 //what-is-myoh home page
 .what-is-myoh {
   padding: 40px 0;
@@ -451,7 +382,6 @@
   p {
     margin-bottom: 20px;
   }
-
   @media only screen and (max-width: 768px) {
     .grid {
       flex-direction: column-reverse;
@@ -462,10 +392,9 @@
         img {
           width: 400px;
           margin: 0 auto;
-
         }
       }
-    };
+    }
   }
 }
 
@@ -495,7 +424,7 @@
 
 //cta-block
 .cta-block {
-  padding: 40px 0;
+  padding: 60px 0;
   @media only screen and (max-width: 768px) {
     .grid {
       .col-img {
@@ -503,6 +432,175 @@
         img {
           width: 400px;
         }
+      }
+    }
+  }
+}
+
+//cta-block
+.cta-block.theme-color {
+  .title-section {
+    color: white;
+  }
+}
+
+
+//articles
+.articles {
+  padding: 60px 0;
+  article {
+    padding: 0 50px;
+    margin-bottom: 60px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .wrap-img {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 50px;
+      img {
+        width: 100%;
+      }
+    }
+    .title-section {
+      font-size: 47px;
+    }
+    ul li { font-size: 32px; }
+    .accent-list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      li {
+        padding: 0 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 1;
+        span {
+          display: block;
+          font-size: 45px;
+        }
+      }
+      @media only screen and (max-width: 1300px) {
+        li {
+          font-size: 26px;
+          span {
+            font-size: 37px;
+          }
+        }
+      }
+      @media only screen and (max-width: 1200px) {
+        li {
+          font-size: 20px;
+          span {
+            font-size: 28px;
+          }
+        }
+      }
+      @media only screen and (max-width: 768px) {
+        flex-direction: column;
+      }
+    }
+    p {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+    .small-text {
+      font-size: 16px;
+      margin-bottom: 0;
+    }
+    .video {
+      width: 600px;
+      max-width: 100%;
+      margin: 0 auto 50px;
+    }
+    @media only screen and (max-width: 1280px) {
+      .wrap-img img {
+        display: block;
+        max-width: 80%;
+        margin: 0 auto;
+      }
+      p, ul li  {
+        font-size: 28px;
+      }
+    }
+    @media only screen and (max-width: 1200px) {
+      .title-section {
+        font-size: 40px;
+      }
+    }
+    @media only screen and (max-width: 992px) {
+      .accent-list {
+        flex-direction: column;
+      }
+      .wrap-img img {
+        max-width: 100%;
+      }
+    }
+    @media only screen and (max-width: 768px) {
+      padding: 0;
+      .title-section {
+        font-size: 32px;
+      }
+      p, ul li {
+        font-size: 20px;
+      }
+    }
+    @media only screen and (max-width: 450px) {
+      .title-section, .wrap-img {
+        margin-bottom: 20px;
+      }
+      ul li {
+        font-size: 18px;
+      }
+      p {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  article.slim-article {
+    p {
+      width: 80%;
+      margin-right: auto;
+      margin-left: auto;
+      @media only screen and (max-width: 450px) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+//reference-block
+.reference-block {
+  padding: 60px 0;
+  .container {
+    max-width: 1040px;
+  }
+  .title-section {
+    font-size: 47px;
+  }
+  ol, ul {
+    margin-bottom: 30px;
+    margin-left: 25px;
+    li {
+      list-style: decimal;
+      font-size: 20px;
+    }
+  }
+  @media only screen and (max-width: 1200px) {
+    .title-section {
+      font-size: 40px;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .title-section {
+      font-size: 32px;
+    }
+    ol, ul {
+      li {
+        font-size: 16px;
       }
     }
   }

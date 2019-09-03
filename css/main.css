@@ -195,6 +195,23 @@ section .title-section {
     border-color: white;
     color: white; }
 
+.btn-white {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 24px;
+  text-decoration: none;
+  color: #005da4;
+  background-color: white;
+  border: solid 2px transparent;
+  margin-bottom: 20px;
+  -webkit-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
+  transition: all 100ms ease-in; }
+  .btn-white:hover {
+    background-color: transparent;
+    color: white;
+    border-color: white; }
+
 blockquote {
   text-align: center;
   margin: 0 0 60px 0; }
@@ -495,13 +512,18 @@ blockquote {
 .hero-block.hero-science {
   background-position: 100% 50%;
   background-image: url("../img/science/intro-science-img.jpg"); }
-  .hero-block.hero-science .hero-content h1 {
-    font-size: 50px;
-    font-family: "Roboto Condensed", sans-serif;
-    margin-bottom: 50px; }
-  @media only screen and (max-width: 768px) {
+  .hero-block.hero-science .hero-content {
+    margin-left: 60px; }
     .hero-block.hero-science .hero-content h1 {
-      margin-bottom: 30px; } }
+      font-size: 50px;
+      font-family: "Roboto Condensed", sans-serif;
+      margin-bottom: 50px;
+      color: #005da4; }
+  @media only screen and (max-width: 768px) {
+    .hero-block.hero-science .hero-content {
+      margin-left: 0; }
+      .hero-block.hero-science .hero-content h1 {
+        margin-bottom: 30px; } }
 
 .hero-block.hero-product {
   background-position: 100% 50%;
@@ -706,44 +728,6 @@ blockquote {
     .elevator-pitch-block h2 {
       font-size: 28px; } }
 
-.bioflavonoids-block {
-  padding: 65px 0; }
-  .bioflavonoids-block p {
-    font-size: 28px;
-    max-width: 1000px;
-    margin: 0 auto 40px; }
-  .bioflavonoids-block .accent-text {
-    max-width: 600px; }
-  .bioflavonoids-block img {
-    display: block;
-    margin: 0 auto; }
-  @media only screen and (max-width: 1200px) {
-    .bioflavonoids-block p {
-      font-size: 24px; } }
-  @media only screen and (max-width: 992px) {
-    .bioflavonoids-block p {
-      font-size: 20px; } }
-
-.charts-block {
-  padding: 60px 0; }
-  .charts-block .centered-text {
-    max-width: 700px;
-    margin: 0 auto 50px; }
-  .charts-block .grid .col {
-    margin-bottom: 80px; }
-    .charts-block .grid .col img {
-      width: 100%;
-      height: auto; }
-  .charts-block .grid .col:nth-child(odd) {
-    padding-right: 40px; }
-  .charts-block .grid .col:nth-child(even) {
-    padding-left: 40px; }
-  @media only screen and (max-width: 768px) {
-    .charts-block .grid .col:nth-child(even), .charts-block .grid .col:nth-child(odd) {
-      width: 100%;
-      padding: 0;
-      margin-bottom: 40px; } }
-
 .info-block {
   padding: 85px 0; }
   .info-block .centered-text {
@@ -752,8 +736,6 @@ blockquote {
     @media only screen and (max-width: 450px) {
       .info-block .centered-text {
         width: 100%; } }
-  .info-block .grid {
-    display: flex; }
   .info-block .col {
     padding: 0 50px;
     display: flex;
@@ -823,11 +805,17 @@ blockquote {
   .icons-section .title-section {
     text-align: center;
     text-transform: uppercase; }
+    @media only screen and (min-width: 1200px) {
+      .icons-section .title-section {
+        font-size: 55px; } }
   .icons-section .icons-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 50px; }
+    .icons-section .icons-list:last-child {
+      margin-bottom: 0; }
     .icons-section .icons-list li {
       width: 25%;
       padding: 0 20px 40px 20px; }
@@ -893,12 +881,128 @@ blockquote {
     margin-left: 50px; }
 
 .cta-block {
-  padding: 40px 0; }
+  padding: 60px 0; }
   @media only screen and (max-width: 768px) {
     .cta-block .grid .col-img {
       justify-content: center; }
       .cta-block .grid .col-img img {
         width: 400px; } }
+
+.cta-block.theme-color .title-section {
+  color: white; }
+
+.articles {
+  padding: 60px 0; }
+  .articles article {
+    padding: 0 50px;
+    margin-bottom: 60px; }
+    .articles article:last-child {
+      margin-bottom: 0; }
+    .articles article .wrap-img {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 50px; }
+      .articles article .wrap-img img {
+        width: 100%; }
+    .articles article .title-section {
+      font-size: 47px; }
+    .articles article ul li {
+      font-size: 32px; }
+    .articles article .accent-list {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .articles article .accent-list li {
+        padding: 0 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 1; }
+        .articles article .accent-list li span {
+          display: block;
+          font-size: 45px; }
+      @media only screen and (max-width: 1300px) {
+        .articles article .accent-list li {
+          font-size: 26px; }
+          .articles article .accent-list li span {
+            font-size: 37px; } }
+      @media only screen and (max-width: 1200px) {
+        .articles article .accent-list li {
+          font-size: 20px; }
+          .articles article .accent-list li span {
+            font-size: 28px; } }
+      @media only screen and (max-width: 768px) {
+        .articles article .accent-list {
+          flex-direction: column; } }
+    .articles article p {
+      font-size: 32px;
+      margin-bottom: 30px; }
+    .articles article .small-text {
+      font-size: 16px;
+      margin-bottom: 0; }
+    .articles article .video {
+      width: 600px;
+      max-width: 100%;
+      margin: 0 auto 50px; }
+    @media only screen and (max-width: 1280px) {
+      .articles article .wrap-img img {
+        display: block;
+        max-width: 80%;
+        margin: 0 auto; }
+      .articles article p, .articles article ul li {
+        font-size: 28px; } }
+    @media only screen and (max-width: 1200px) {
+      .articles article .title-section {
+        font-size: 40px; } }
+    @media only screen and (max-width: 992px) {
+      .articles article .accent-list {
+        flex-direction: column; }
+      .articles article .wrap-img img {
+        max-width: 100%; } }
+    @media only screen and (max-width: 768px) {
+      .articles article {
+        padding: 0; }
+        .articles article .title-section {
+          font-size: 32px; }
+        .articles article p, .articles article ul li {
+          font-size: 20px; } }
+    @media only screen and (max-width: 450px) {
+      .articles article .title-section, .articles article .wrap-img {
+        margin-bottom: 20px; }
+      .articles article ul li {
+        font-size: 18px; }
+      .articles article p {
+        font-size: 18px;
+        margin-bottom: 20px; } }
+  .articles article.slim-article p {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto; }
+    @media only screen and (max-width: 450px) {
+      .articles article.slim-article p {
+        width: 100%; } }
+
+.reference-block {
+  padding: 60px 0; }
+  .reference-block .container {
+    max-width: 1040px; }
+  .reference-block .title-section {
+    font-size: 47px; }
+  .reference-block ol, .reference-block ul {
+    margin-bottom: 30px;
+    margin-left: 25px; }
+    .reference-block ol li, .reference-block ul li {
+      list-style: decimal;
+      font-size: 20px; }
+  @media only screen and (max-width: 1200px) {
+    .reference-block .title-section {
+      font-size: 40px; } }
+  @media only screen and (max-width: 768px) {
+    .reference-block .title-section {
+      font-size: 32px; }
+    .reference-block ol li, .reference-block ul li {
+      font-size: 16px; } }
 
 .main-footer {
   padding: 40px 0;
